@@ -24,7 +24,7 @@ namespace Model.Data
 
             XmlNode root = doc.SelectSingleNode("LotteryResult");
             if (root == null)
-                return lines; // или выбросить исключение
+                return lines; 
 
             string GetNodeText(string nodeName)
             {
