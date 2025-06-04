@@ -65,11 +65,11 @@ namespace LotteryArchive
 
                 if (extension == ".json")
                 {
-                    result = new JsonSerializer().DeserializeLottery(file); // ваш метод для JSON
+                    result = new JsonSerializer().DeserializeLottery(file);
                 }
                 else if (extension == ".xml")
                 {
-                    result = new XmlLotterySerializer().DeserializeLottery(file); // ваш метод для XML
+                    result = new XmlLotterySerializer().DeserializeLottery(file);
                 }
                 else
                 {
@@ -77,7 +77,7 @@ namespace LotteryArchive
                 }
 
                 if (result == null || result.Count < 8)
-                    continue; // Проверка на корректность данных
+                    continue; 
 
                 string lotteryName = result[0];
                 string participants = result[1];
