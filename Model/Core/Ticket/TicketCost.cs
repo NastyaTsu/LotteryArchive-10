@@ -15,7 +15,7 @@ namespace LotteryArchive.Model.Core
         public void SetCost(Lottery lottery)
         {
             if (lottery == null) throw new ArgumentNullException("Лотерея не может быть null");
-            _cost = Math.Abs(lottery.Price); // Убедимся, что цена положительная
+            _cost = Math.Abs(lottery.Price); 
         }
     }
 }
