@@ -27,13 +27,12 @@ namespace LotteryArchive
             ParticipantsChanged?.Invoke();
         }
 
-        // И в button1_Click:
         private void button1_Click(object sender, EventArgs e)
         {
             var form = new PersonAddEdit();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                AddParticipant(form.Person); // Используем метод вместо People.Add
+                AddParticipant(form.Person);
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = People;
             }
